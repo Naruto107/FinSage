@@ -10,15 +10,14 @@ const HeroSection = () => {
 
   useEffect(() => {
     const imageElement = imageRef.current;
-
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const scrollThreshold = 100;
 
       if (scrollPosition > scrollThreshold) {
-        imageElement.classList.add("scrolled");
+        imageElement?.classList.add("scrolled");
       } else {
-        imageElement.classList.remove("scrolled");
+        imageElement?.classList.remove("scrolled");
       }
     };
 
@@ -27,38 +26,36 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="pt-40 pb-20 px-4">
-      <div className="container mx-auto text-center">
-        <h1 className="text-5xl md:text-8xl lg:text-[105px] pb-6 gradient-title">
-          Manage Your Finances <br /> with Intelligence
+    <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
+      {/* Background Image */}
+      <div ref={imageRef} className="absolute inset-0 z-0">
+        <Image
+          src="/banner.jpeg"
+          alt="Background"
+          fill
+          className="object-cover w-full h-full"
+          priority
+        />
+        {/* Optional dark overlay for better contrast */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      </div>
+
+      {/* Overlay content */}
+      <div className="relative z-10 px-4 text-left max-w-4xl w-full mx-auto lg:ml-20 font-serif" >
+        <h1 className="text-5xl md:text-8xl lg:text-[105px] pb-6 text-gray-100">
+          Manage Your Finances <br /> with AI
         </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        <p className="text-xl text-white mb-8 max-w-2xl text-left">
+
           An AI-powered financial management platform that helps you track,
           analyze, and optimize your spending with real-time insights.
         </p>
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-start space-x-4">
           <Link href="/dashboard">
-            <Button size="lg" className="px-8">
+            <Button size="lg" className="px-8 bg-white text-black text-lg">
               Get Started
             </Button>
           </Link>
-          <Link href="https://www.youtube.com/roadsidecoder">
-            <Button size="lg" variant="outline" className="px-8">
-              Watch Demo
-            </Button>
-          </Link>
-        </div>
-        <div className="hero-image-wrapper mt-5 md:mt-0">
-          <div ref={imageRef} className="hero-image">
-            <Image
-              src="/banner.jpeg"
-              width={1280}
-              height={720}
-              alt="Dashboard Preview"
-              className="rounded-lg shadow-2xl border mx-auto"
-              priority
-            />
-          </div>
         </div>
       </div>
     </section>

@@ -10,27 +10,27 @@ const Header = async () => {
   await checkUser();
 
   return (
-    <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <header className="fixed top-0 w-full bg-[rgba(17,24,39,0.85)] z-50 border-b ">
+      <nav className="container mx-auto px-4 py-4 flex items-center justify-between ">
         <Link href="/">
           <Image
-            src={"/logo.png"}
+            src={"/logo1.jpg"}
             alt="Welth Logo"
             width={200}
-            height={60}
-            className="h-12 w-auto object-contain"
+            height={80}
+            className="h-12 w-auto object-contain rounded-lg"
           />
         </Link>
 
         {/* Navigation Links - Different for signed in/out users */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-8 text-lg">
           <SignedOut>
-            <a href="#features" className="text-gray-600 hover:text-blue-600">
+            <a href="#features" className="text-gray-200 hover:text-blue-600">
               Features
             </a>
             <a
               href="#testimonials"
-              className="text-gray-600 hover:text-blue-600"
+              className="text-gray-200 hover:text-blue-600 text-lg"
             >
               Testimonials
             </a>
@@ -58,7 +58,7 @@ const Header = async () => {
           </SignedIn>
           <SignedOut>
             <SignInButton forceRedirectUrl="/dashboard">
-              <Button variant="outline">Login</Button>
+              <Button className="text-lg bg-transparent text-white" variant="outline">Login</Button>
             </SignInButton>
           </SignedOut>
           <SignedIn>

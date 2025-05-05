@@ -1,24 +1,23 @@
-# Full Stack AI Fianace Platform with Next JS, Supabase, Tailwind, Prisma, Inngest, ArcJet, Shadcn UI Tutorial 🔥🔥
-## https://youtu.be/egS6fnZAdzk
+# 💸 FinSage – Smart Finance Tracker
 
-<img width="1470" alt="Screenshot 2024-12-10 at 9 45 45 AM" src="https://github.com/user-attachments/assets/1bc50b85-b421-4122-8ba4-ae68b2b61432">
+FinSage is a modern, full-stack web application that helps users **track their income, expenses, and savings** with ease. Designed to simplify personal finance management, FinSage offers an intuitive interface and secure authentication to ensure your financial data stays safe.
 
-### Make sure to create a `.env` file with following variables -
+## 🚀 Live Demo
 
-```
-DATABASE_URL=
-DIRECT_URL=
 
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/onboarding
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
+## ✨ Features
 
-GEMINI_API_KEY=
+- 🔐 **Authentication** via Clerk
+- 🧾 Track **incomes** and **expenses**
+- 📊 Visualize spending with **charts & graphs**
+- 🧠 Clean UI and responsive design
+- 🌙 Dark mode toggle
+- 💾 Persistent data storage (via MongoDB or your backend choice)
 
-RESEND_API_KEY=
+## 🛠️ Tech Stack
 
-ARCJET_KEY=
-```
+- **Frontend:** React.js, Tailwind CSS
+- **Backend:** Node.js, Express.js 
+- **Framework:** Next.js 15
+- **Authentication:** Clerk
+- **Deployment:** Vercel

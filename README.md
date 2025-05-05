@@ -4,6 +4,7 @@ FinSage is a modern, full-stack web application that helps users **track their i
 
 ## 🚀 Live Demo
 
+Check it out here: https://fin-sage-gamma.vercel.app/
 
 ## ✨ Features
 
